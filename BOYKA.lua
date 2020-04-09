@@ -670,7 +670,7 @@ end
 return false
 end
 if SudoBot(msg) then
-local bl = '⚜️| اهلا عزيزي آلمـطـور\n👨‍💻| آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n🔘| تسـتطـيع‌‏ آلتحگم باوامر البوت\n🔰| من خلاال الكيبورت خاص بك\n📮| قناة سورس البوت [اضغط هنا](t.me/BOBBW)'
+local bl = '⚜️| اهلا عزيزي آلمـطـور\n👨‍💻| آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n🔘| تسـتطـيع‌‏ آلتحگم باوامر البوت\n🔰| من خلاال الكيبورت خاص بك\n📮| قناة سورس البوت [اضغط هنا](t.me/MERO170)'
 local keyboard = {
 {'الاحصائيات 🔍'},
 {'تعطيل التواصل ✖️','تفعيل التواصل 🔛'},
@@ -696,7 +696,7 @@ local start = database:get(bot_id.."Start:Bot")
 if start then 
 SourceBOYKAr = start
 else
-SourceBOYKAr = '🔖| اهلا عزيزي\n📮| انا بوت اسمي ' ..Namebot..'\n⚡| اختصاصي حمايه المجموعات\n✨| من تكرار والسبام والتوجيه والخ…\n🚸| لتفعيلي اتبع الاخطوات…↓\n⚠️| اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع »{ منشئ او المشرفين } بتفعيل فقط\n[📌| قناة سورس البوت](t.me/BOBBW)'
+SourceBOYKAr = '🔖| اهلا عزيزي\n📮| انا بوت اسمي ' ..Namebot..'\n⚡| اختصاصي حمايه المجموعات\n✨| من تكرار والسبام والتوجيه والخ…\n🚸| لتفعيلي اتبع الاخطوات…↓\n⚠️| اضفني الي مجموعتك وقم بترقيتي ادمن واكتب كلمه { تفعيل }  ويستطيع »{ منشئ او المشرفين } بتفعيل فقط\n[📌| قناة سورس البوت](t.me/MERO170)'
 end 
 send(msg.chat_id_, msg.id_, SourceBOYKAr) 
 end
@@ -860,7 +860,7 @@ dofile('BOYKA.lua')
 end
 if text == 'الاصدار 📟' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,'📡| اصدار سورس ميرو\n📟| الاصدار ←{ 1.2v}') 
+send(msg.chat_id_, msg.id_,'📡| اصدار سورس ميرو \n📟| الاصدار ←{ 1.2v}') 
 end
 if text == "ضع اسم للبوت ®" and SudoBot(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -3114,7 +3114,7 @@ end
 
 
 if text == 'الملفات' and SudoBot(msg) then
-t = '📮| ملفات السورس ميرو↓\n ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ء \n'
+t = '📮| ملفات السورس ميرو ↓\n ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ء \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -3126,13 +3126,13 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if SudoBot(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/MERO170/Files_Boyka/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/BOYKATEAM/Files_Boyka/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
 local TextS = "\n📁| اهلا بك في متجر ملفات ميرو\n🔰| ملفات السورس ↓\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n\n"
-local TextE = "\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n🔘|  علامة تعني { ✓ } ملف مفعل\n🔘| علامة تعني { ✘ } ملف معطل\n🔖| قناة سورس ميرو↓\n".."📮| [اضغط هنا لدخول](t.me/MERO170) \n"
+local TextE = "\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n🔘|  علامة تعني { ✓ } ملف مفعل\n🔘| علامة تعني { ✘ } ملف معطل\n🔖| قناة سورس ميرو ↓\n".."📮| [اضغط هنا لدخول](t.me/MERO170) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -3164,7 +3164,7 @@ t = "📁| الملف ← "..file.."\n🔰| تم تعطيل ملف \n"
 else
 t = "🔖| بالتاكيد تم تعطيل ملف → "..file.."\n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/MERO170/Files_Boyka/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/BOYKATEAM/Files_Boyka/master/File_Bot/"..file)
 if res == 200 then
 os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
@@ -3184,7 +3184,7 @@ t = "🔖| بالتاكيد تم تفعيل ملف → "..file.." \n"
 else
 t = "📁| الملف ← "..file.."\n🔰| تم تفعيل ملف \n"
 end
-local json_file, res = https.request("https://raw.githubusercontent.com/MERO170/Files_Boyka/master/File_Bot/"..file)
+local json_file, res = https.request("https://raw.githubusercontent.com/BOYKATEAM/Files_Boyka/master/File_Bot/"..file)
 if res == 200 then
 local chek = io.open("File_Bot/"..file,'w+')
 chek:write(json_file)
